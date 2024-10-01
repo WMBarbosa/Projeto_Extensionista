@@ -15,6 +15,12 @@ public class BusinessResource {
     @Autowired
     private BusinessService businessService;
 
+    @PostMapping("/register")
+    public ResponseEntity<Business> registerBusiness(@RequestBody Business business) {
+        Business newBusiness = businessService.registerBusiness(business);
+        return ResponseEntity.ok().body(newBusiness);
+    }
+
     @GetMapping("/owner/{email}")
     public List<Business> getBusinessesByOwnerEmail(@PathVariable String email) {
         return businessService.findBusinessByOwnerEmail(email);
