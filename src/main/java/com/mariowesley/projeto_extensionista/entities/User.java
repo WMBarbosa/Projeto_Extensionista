@@ -2,6 +2,9 @@ package com.mariowesley.projeto_extensionista.entities;
 
 import com.mariowesley.projeto_extensionista.entities.enums.Role;
 import jakarta.persistence.*;
+import jakarta.validation.constraints.Email;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.Size;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -25,8 +28,15 @@ public class User implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    @NotBlank(message = "O nome é obrigatório")
     private String name;
+
+    @NotBlank(message = "O email é obrigatório")
+    @Email(message = "Email deve ser válido")
     private String email;
+
+    @NotBlank(message = "A senha é obrigatória")
+    @Size(min = 6, message = "A senha deve ter pelo menos 6 caracteres")
     private String password;
 
     @Enumerated(EnumType.STRING)

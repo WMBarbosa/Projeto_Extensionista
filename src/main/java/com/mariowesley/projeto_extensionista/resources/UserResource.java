@@ -4,9 +4,11 @@ import com.mariowesley.projeto_extensionista.entities.User;
 import com.mariowesley.projeto_extensionista.services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
+import javax.validation.Valid;
 import java.net.URI;
 import java.util.List;
 
@@ -36,7 +38,7 @@ public class UserResource {
     }
 
     @PostMapping(value = "/register")
-    public ResponseEntity<User> insert(@RequestBody User user){
+    public ResponseEntity<User> insert(@Valid @RequestBody User user){
         user = userService.insert(user);
         URI uri = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}")
                 .buildAndExpand(user.getId()).toUri();
