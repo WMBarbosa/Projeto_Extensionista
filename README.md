@@ -15,7 +15,7 @@ O projeto foi desenvolvido utilizando as seguintes tecnologias:
 - **Backend:**
   - [Java](https://www.oracle.com/java/) com [Spring Boot](https://spring.io/projects/spring-boot) para a criação do backend RESTful.
   - **JPA (Java Persistence API)** para a persistência dos dados.
-  - **PostgreSQL** ou **MongoDB** como banco de dados (dependendo da configuração de produção).
+  - **MySQL** como banco de dados.
   
 - **Frontend:**
   - O frontend da aplicação está em desenvolvimento (detalhes futuros podem ser adicionados).
