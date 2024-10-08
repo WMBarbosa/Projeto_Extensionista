@@ -1,4 +1,5 @@
-Plataforma de Capacitação e Conectividade para Pequenos Negócios
+##Plataforma de Capacitação e Conectividade para Pequenos Negócios
+
 Este repositório contém o projeto Plataforma de Capacitação e Conectividade para Pequenos Negócios, que tem como objetivo promover a inclusão digital de pequenos negócios em comunidades carentes. A plataforma oferece capacitação, conectividade e ferramentas tecnológicas que facilitam o crescimento desses empreendimentos.
 
 🚀 Objetivos do Projeto
