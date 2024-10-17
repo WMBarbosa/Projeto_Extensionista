@@ -51,7 +51,7 @@ Certifique-se de ter o seguinte instalado:
 
 - **Java 11** ou superior
 - **Maven** para gerenciar dependências
-- **PostgreSQL** ou **MongoDB** (dependendo do ambiente)
+- **MYSQL**
 
 ### Passos para executar o projeto
 
